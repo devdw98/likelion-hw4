@@ -131,6 +131,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 AUTHENTICATION_BACKENDS = (
     #Needed to login by username in Django admin, regardless of 'allauth'
     'django.contrib.auth.backends.ModelBackend',
